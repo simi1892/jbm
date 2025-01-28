@@ -1,6 +1,5 @@
 import { T } from "../state.ts";
 import { asset } from "$fresh/runtime.ts";
-import { Balancer } from "react-wrap-balancer";
 import { ArrowDownIcon } from "./icons.tsx";
 
 export default function Hero() {

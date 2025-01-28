@@ -1,9 +1,10 @@
-import { LayoutProps } from "$fresh/server.ts";
+import { PageProps } from "$fresh/server.ts";
 import Footer from "../components/footer.tsx";
+import { State } from "../routes/_middleware.tsx";
 
-export default function LayoutPage(props: LayoutProps<null, State>) {
+export default function LayoutPage(props: PageProps<null, State>) {
   return (
-    <html lang="en">
+    <html lang={props.state.lang}>
       <head>
         <title>Jana Bachl - Musical Actress</title>
         <meta

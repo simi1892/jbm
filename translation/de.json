@@ -2,5 +2,11 @@
     "hero": {
       "hello": "Hallo, ich bin Jana",
       "title": "Musical Darstellerin"
-    }
+    },
+    "titles": {
+    "home": "Home",
+    "aboutme": "Über mich",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  }
 }

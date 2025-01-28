@@ -4,7 +4,7 @@ import {
   PDFFileIcon
 } from "./icons.tsx";
 import { Translation } from "../translation/types.ts";
-import { Button } from "./Button.tsx";
+import { Button } from "./button.tsx";
 
 type EduxProps = {
   title: string;

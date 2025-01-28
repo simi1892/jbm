@@ -1,12 +1,67 @@
 {
-    "hero": {
-      "hello": "Hi, I'm Jana",
-      "title": "Musical Actress"
-    },
-    "titles": {
+  "hero": {
+    "hello": "Hi, I'm Jana",
+    "title": "Musical Actress"
+  },
+  "titles": {
     "home": "Home",
     "aboutme": "About Me",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "me": {
+    "intro": [
+      "Hello! I'm a passionate Musical Actress living in Zurich. You can find here some of my experience and skills as well as a form to contact me. I am looking forward to meet you!"
+    ],
+    "get": "Get my resume",
+    "education": {
+      "title": "Education",
+      "edux": [
+        {
+          "title": "SAMTS StageArt Musical & Theatre School",
+          "date": "February 2022 - February 2026",
+          "text": "Professional Diploma - Part-time education: after 4 years"
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "edux": [
+        {
+          "title": "Title 1",
+          "date": "June 2016 - August 2023",
+          "text": [
+            "Some",
+            "Experience"
+          ]
+        },
+        {
+          "title": "Title 2",
+          "date": "September 2013 - May 2016",
+          "text": [
+            "Further",
+            "Experience"
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills"
+    }
+  },
+  "projects": {
+    "garface": "An app for designing GARMIN watch faces",
+    "recact": "An app for time recording activities and sharing them easily",
+    "www": "This website",
+    "react-uis": "A comparator for React UI librairies",
+    "stybulate": "A Rust crate for creating terminal tables",
+    "bookfinder": "A simple example app"
+  },
+  "contact": {
+    "please": "Want to get in touch? Please fill out this form.",
+    "send": "Send",
+    "sent": "Sent",
+    "thanks": "Thank you for reaching out, I'll get back to you ASAP!",
+    "back": "Back."
   }
 }

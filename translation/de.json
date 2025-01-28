@@ -1,12 +1,67 @@
 {
-    "hero": {
-      "hello": "Hallo, ich bin Jana",
-      "title": "Musical Darstellerin"
-    },
-    "titles": {
+  "hero": {
+    "hello": "Hallo, ich bin Jana",
+    "title": "Musical Darstellerin"
+  },
+  "titles": {
     "home": "Home",
     "aboutme": "Über mich",
     "projects": "Projekte",
     "contact": "Kontakt"
+  },
+  "me": {
+    "intro": [
+      "Hallo! Ich bin eine leidenschaftliche Musicaldarstellerin aus Zürich. Hier findest Du einige Erfahrungen und Fähigkeiten von mir, sowie ein Kontaktformular. Ich freue mich von Dir zu hören!"
+    ],
+    "get": "Lade mein Resume",
+    "education": {
+      "title": "Ausbildungen",
+      "edux": [
+        {
+          "title": "SAMTS StageArt Musical & Theatre School",
+          "date": "Februar 2022 - Februar 2026",
+          "text": "Profi-Diplom - Nebenberufliche Ausbildung: nach 4 Jahren"
+        }
+      ]
+    },
+    "experience": {
+      "title": "Erfahrungen",
+      "edux": [
+        {
+          "title": "Titel 1",
+          "date": "June 2016 - August 2023",
+          "text": [
+            "Einige",
+            "Erfahrungen"
+          ]
+        },
+        {
+          "title": "Titel 2",
+          "date": "September 2013 - May 2016",
+          "text": [
+            "Weiter",
+            "Erfahrungen"
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills"
+    }
+  },
+  "projects": {
+    "garface": "An app for designing GARMIN watch faces",
+    "recact": "An app for time recording activities and sharing them easily",
+    "www": "This website",
+    "react-uis": "A comparator for React UI librairies",
+    "stybulate": "A Rust crate for creating terminal tables",
+    "bookfinder": "A simple example app"
+  },
+  "contact": {
+    "please": "Möchten Sie Kontakt aufnehmen? Bitte füllen Sie dieses Formular aus.",
+    "send": "Senden",
+    "sent": "Gesendet",
+    "thanks": "Vielen Dank für Ihre Nachricht, ich werde mich so schnell wie möglich bei Ihnen melden!",
+    "back": "Zurück."
   }
 }

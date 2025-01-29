@@ -1,6 +1,7 @@
 import { asset } from "$fresh/runtime.ts";
 import ColorMode from "../islands/color-mode.tsx";
 import Language from "../islands/language.tsx";
+import MobileHeader from "../islands/mobile-header.tsx";
 import { State } from "../routes/_middleware.tsx";
 
 type Menu = { name: string; href: string };
@@ -13,8 +14,8 @@ export type HeaderProps = {
 };
 
 function LargeHeader(props: Omit<HeaderProps, "sticky">) {
-    return (
-<div class="text-md hidden h-14 flex-row flex-wrap gap-6 px-4 font-bold text-gray-700 dark:text-gray-300 sm:flex">
+  return (
+    <div class="text-md hidden h-14 flex-row flex-wrap gap-6 px-4 font-bold text-gray-700 dark:text-gray-300 sm:flex">
       <ul class="flex flex-1 items-center gap-6">
         {props.active !== "/" && (
           <li>
@@ -69,20 +70,21 @@ function LargeHeader(props: Omit<HeaderProps, "sticky">) {
         <ColorMode />
       </div>
     </div>
-    );
-  }
+  );
+}
 
 export default function Header(props: HeaderProps) {
-    const menus: { name: string; href: string }[] = [
-    ];
-    props.right = props.right ?? menus;
-    return (
-      <header
-        class={`w-full bg-gray-100 dark:bg-gray-700 ${
-          props.sticky ?? "sticky top-0 z-10 -mb-12 sm:-mb-14"
-        }`}
-      >
-        <LargeHeader {...props} />
-      </header>
-    );
+  const menus: { name: string; href: string }[] = [];
+  props.right = props.right ?? menus;
+  
+  return (
+    <header
+      class={`w-full bg-gray-100 dark:bg-gray-700 ${
+        props.sticky ?? "sticky top-0 z-10 -mb-12 sm:-mb-14"
+      }`}
+    >
+      <LargeHeader {...props} />
+      <MobileHeader {...props} />
+    </header>
+  );
 }

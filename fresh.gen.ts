@@ -9,6 +9,7 @@ import * as $_middleware from "./routes/_middleware.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $color_mode from "./islands/color-mode.tsx";
 import * as $language from "./islands/language.tsx";
+import * as $mobile_header from "./islands/mobile-header.tsx";
 import * as $project from "./islands/project.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -23,6 +24,7 @@ const manifest = {
   islands: {
     "./islands/color-mode.tsx": $color_mode,
     "./islands/language.tsx": $language,
+    "./islands/mobile-header.tsx": $mobile_header,
     "./islands/project.tsx": $project,
   },
   baseUrl: import.meta.url,

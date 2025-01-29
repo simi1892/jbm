@@ -57,7 +57,7 @@ function Projects() {
           summary={T.value!.projects.bookfinder}
           tech="React, Google books API"
           github="https://github.com/guigui64/bookfinder"
-          />
+        />
       </div>
     </section>
   );
@@ -68,6 +68,8 @@ function Recommendations() {
 }
 
 export default function Home(props: PageProps<null, State>) {
+  T.value = props.state.t;
+
   const LINKS = [
     { name: props.state.t.titles.aboutme, href: "#about-me" },
     { name: props.state.t.titles.projects, href: "#projects" },

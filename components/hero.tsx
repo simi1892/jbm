@@ -4,10 +4,10 @@ import { ArrowDownIcon } from "./icons.tsx";
 
 export default function Hero() {
   const t = T.value;
-  
+
   // Add null check
   if (!t) return null;
-  
+
   return (
     <div class="min-w-screen flex flex-col items-center justify-between bg-gray-100 dark:bg-gray-700 sm:min-h-screen">
       <div class=""></div>
@@ -19,10 +19,10 @@ export default function Hero() {
         />
         <div class="space-y-2 text-center md:text-left">
           <h1 class="animate__animated animate__fadeInUp animate__delay-1s text-2xl font-bold sm:text-4xl">
-              <span class="dark:(from-cyan-400 to-teal-400) bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">
-                {t.hero.hello}
-              </span>{" "}
-              <span class="animate-wave inline-block">👋🏽</span>
+            <span class="bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent dark:from-cyan-400 dark:to-teal-400">
+              {t.hero.hello}
+            </span>
+            <span class="animate-wave inline-block">👋🏽</span>
           </h1>
           <h2 class="text-md animate__animated animate__fadeInUp animate__delay-2s font-medium text-cyan-700 dark:text-cyan-200 sm:text-xl">
             {t.hero.jobTitle}

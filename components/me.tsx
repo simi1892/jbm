@@ -13,15 +13,15 @@ function Edux(props: EduxProps) {
   return (
     <div>
       <div class="flex flex-col text-lg md:flex-row md:justify-between">
-        <p class="text-gray-600 dark:text-gray-400 md:order-2 md:text-right">
+        <p class="text-gray-600 dark:text-gray-400 transition-colors md:order-2 md:text-right">
           {props.date}
         </p>
-        <h3 class="font-medium md:order-1">
+        <h3 class="font-medium transition-colors md:order-1">
           {props.title}
         </h3>
       </div>
       {props.text && (
-        <p class="whitespace-pre-wrap text-gray-600 dark:text-gray-400">
+        <p class="whitespace-pre-wrap text-gray-600 dark:text-gray-400 transition-colors">
           {typeof props.text === "string" ? props.text : props.text.join("\n")}
         </p>
       )}
@@ -38,8 +38,10 @@ function Skill(props: SkillProps) {
   return (
     <div class="flex items-center justify-between gap-1 text-lg font-medium">
       {props.icon}
-      <span class="flex-1">{props.title}</span>
-      <span class="text-gray-600 dark:text-gray-400">{props.level}</span>
+      <span class="flex-1 transition-colors">{props.title}</span>
+      <span class="text-gray-600 dark:text-gray-400 transition-colors">
+        {props.level}
+      </span>
     </div>
   );
 }
@@ -65,7 +67,7 @@ export default function Me() {
       </div>
       <div class="lg:grid-cols-desktop grid grid-cols-1 gap-x-10 gap-y-6">
         <div class="flex justify-between gap-2 flex-wrap">
-          <h1 class="whitespace-nowrap text-3xl font-bold uppercase text-gray-600 dark:text-gray-400 lg:text-right">
+          <h1 class="whitespace-nowrap text-3xl font-bold uppercase text-gray-600 dark:text-gray-400 transition-colors lg:text-right">
             {t.titles.aboutme}
           </h1>
           <div class="block lg:hidden">
@@ -85,7 +87,7 @@ export default function Me() {
 function Experience(props: Translation["me"]["experience"]) {
   return (
     <>
-      <h2 class="text-xl font-bold uppercase text-gray-600 dark:text-gray-400 lg:text-right">
+      <h2 class="text-xl font-bold uppercase text-gray-600 dark:text-gray-400 transition-colors lg:text-right">
         {props.title}
       </h2>
       <ul class="space-y-2">

@@ -1,8 +1,6 @@
 import { ComponentChildren } from "preact";
 import { T } from "../state.ts";
-import {
-  PDFFileIcon
-} from "./icons.tsx";
+import { PDFFileIcon } from "./icons.tsx";
 import { Translation } from "../translation/types.ts";
 import { Button } from "./button.tsx";
 
@@ -75,9 +73,7 @@ export default function Me() {
           </div>
         </div>
         <div class="space-y-2">
-          {t.me.intro.map((p) => (
-            <p class="text-justify">{p}</p>
-          ))}
+          {t.me.intro.map((p) => <p class="text-justify">{p}</p>)}
         </div>
         <Experience {...t.me.experience} />
         <Education {...t.me.education} />

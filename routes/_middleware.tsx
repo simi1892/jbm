@@ -11,25 +11,31 @@ export type State = {
 
 export async function handler(req: Request, ctx: FreshContext<State>) {
   let setLangCookie = true;
-  if (
-    req.headers.has("cookie") && req.headers.get("cookie")!.includes("lang")
-  ) {
-    ctx.state.lang = req.headers.get("cookie")!.includes("lang=de")
-      ? "de"
-      : "en";
-    setLangCookie = false;
-  } else if (req.headers.get("accept-language")?.includes("de")) {
-    ctx.state.lang = "de";
-  } else {
-    ctx.state.lang = "en";
+
+  // Default to English
+  ctx.state.lang = "en";
+
+  const cookieHeader = req.headers.get("cookie");
+  if (cookieHeader) {
+    const match = cookieHeader.match(/lang=(de|en)/);
+    if (match) {
+      ctx.state.lang = match[1] as "de" | "en";
+      setLangCookie = false;
+    }
   }
+
+  // Set translation based on language
   ctx.state.t = ctx.state.lang === "de" ? de : en;
+
   const res = await ctx.next();
+
+  // Set cookie if needed
   if (setLangCookie) {
     res.headers.set(
       "Set-Cookie",
-      `lang=${ctx.state.lang}; Path=/; HttpOnly; SameSite=Lax`,
+      `lang=${ctx.state.lang}; Path=/; HttpOnly; SameSite=Lax; Max-Age=31536000`,
     );
   }
+
   return res;
 }
